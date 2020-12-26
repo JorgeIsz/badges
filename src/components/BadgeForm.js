@@ -4,18 +4,11 @@ import "bootstrap/dist/css/bootstrap.css";
 
 class BadgeForm extends React.Component {
 
-	state = {
-		firstName:"",
-		lastName:"",
-		email:"",
-		career:"",
-	}
-
 	handleChange = this.props.onChange
 
 	handleClick = () => {
 		console.log("CLG: button clicked")
-		console.log(this.state)
+		console.log(this.props.formValues)
 	}
 
 	render(){
@@ -29,12 +22,14 @@ class BadgeForm extends React.Component {
 							className="form-control"
 							onChange={this.handleChange}
 							name="firstName"
+							value={this.props.formValues.firstName}
 						/>
 						<label>Last Name</label>
 						<input 
 							className="form-control"
 							onChange={this.handleChange}
 							name="lastName"
+							value={this.props.formValues.lastName}
 						/>
 						<label>Email</label>
 						<input 
@@ -42,18 +37,21 @@ class BadgeForm extends React.Component {
 							onChange={this.handleChange}
 							name="email"
 							type="email"
+							value={this.props.formValues.email}
 						/>
 						<label>Career</label>
 						<input 
 							className="form-control"
 							onChange={this.handleChange}
 							name="career"
+							value={this.props.formValues.career}
 						/>
 						<label>Twitter</label>
 						<input 
 							className="form-control"
 							onChange={this.handleChange}
 							name="twitter"
+							value={this.props.formValues.twitter}
 						/>
 						<button
 							type="button"

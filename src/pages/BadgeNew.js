@@ -7,7 +7,15 @@ import './styles/BadgeNew.css'
 
 class BadgeNew extends React.Component {
 
-	state = { form: {} }
+	state = { 
+		form: {
+			firstName:"",
+			lastName:"",
+			email:"",
+			twitter:"",
+			career:"",
+		} 
+	}
 
 	handleChange = e => {
 		this.setState({
@@ -27,12 +35,13 @@ class BadgeNew extends React.Component {
 						<Badge 
 							firstName={this.state.form.firstName}
 							lastName={this.state.form.lastName}
-							career={this.state.form.career}
+							email={this.state.form.email}									
 							twitter={this.state.form.twitter}
-						/>
-					</div>
-				<BadgeForm onChange={this.handleChange} className="badge-form"/>
-				</div>
+							career={this.state.form.career}										
+						/>                             
+					</div>                             											
+				<BadgeForm formValues={this.state.form} onChange={this.handleChange}             className="badge-form"/>
+				</div>                                 											
 			</div>
 		)
 	}
