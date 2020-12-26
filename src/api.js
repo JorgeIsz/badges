@@ -6,7 +6,7 @@ let callApi = () => {
 			{id:"3",firstName:"Miguel",lastName:"Carranza",twitter:"mcar",career:"Software Engineer"},
 			{id:"4",firstName:"Antonio",lastName:"Fernandez",twitter:"afernandez",career:"Software Engineer"},
 		]
-		resolve(data)
+		setTimeout(()=>resolve(data),1500)
 	})
 }
 
@@ -14,7 +14,7 @@ let callApi = () => {
 const api = {
 	badges: {
 		list(){
-			return [] 
+			return callApi() 
 		}
 	}
 }

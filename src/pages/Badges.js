@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import api from '../api'
 
 import './styles/Badges.css'
+import PageLoading from '../components/PageLoading'
 
 class Badges extends React.Component {
 
@@ -36,7 +37,7 @@ class Badges extends React.Component {
 
 	render(){
 		if(this.state.loading){
-			return 'Loading...'
+			return <PageLoading />
 		}
 		return (
 		<div>
