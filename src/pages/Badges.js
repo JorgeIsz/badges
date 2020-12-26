@@ -1,5 +1,6 @@
 import React from 'react'
 import BadgesList from '../components/BadgesList'
+import { Link } from 'react-router-dom'
 
 import Navbar from '../components/Navbar'
 
@@ -21,7 +22,12 @@ class Badges extends React.Component {
 		<div>
 			<Navbar />
 			<div className="badges-content">
-				<h3>Speakers</h3>
+				<div className="row">
+					<h3>Speakers</h3>
+					<div> 
+						<Link className="btn btn-primary ml-2" to="/badges/new">Add</Link>
+					</div>
+				</div>
 				<div className="list-container">
 					<BadgesList badges={this.state.data}/>
 				</div>
