@@ -13,7 +13,7 @@ class Badge extends React.Component {
 				<div className="card-body">
 			 		<h5 className="card-title">{this.props.firstName} {this.props.lastName}</h5>
 			 		<p className="card-text">{this.props.career}</p>
-			 		<a href="#">{this.props.twitter}</a>
+			 		<p>@{this.props.twitter}</p>
 				</div>
 			</div>
 		)

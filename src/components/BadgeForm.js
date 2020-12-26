@@ -11,11 +11,7 @@ class BadgeForm extends React.Component {
 		career:"",
 	}
 
-	handleChange = e => {
-		this.setState({
-			[e.target.name]:e.target.value
-		})
-	}
+	handleChange = this.props.onChange
 
 	handleClick = () => {
 		console.log("CLG: button clicked")
@@ -33,7 +29,6 @@ class BadgeForm extends React.Component {
 							className="form-control"
 							onChange={this.handleChange}
 							name="firstName"
-							value={this.state.firstName}
 						/>
 						<label>Last Name</label>
 						<input 
@@ -53,6 +48,12 @@ class BadgeForm extends React.Component {
 							className="form-control"
 							onChange={this.handleChange}
 							name="career"
+						/>
+						<label>Twitter</label>
+						<input 
+							className="form-control"
+							onChange={this.handleChange}
+							name="twitter"
 						/>
 						<button
 							type="button"
