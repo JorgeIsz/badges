@@ -1,0 +1,12 @@
+.badge-new-content{
+	display:grid;
+	grid-template-columns:50% 50%;
+}
+
+.badges-list{
+	padding:3%;
+}
+
+.badge-form{
+	padding:3%;
+}
