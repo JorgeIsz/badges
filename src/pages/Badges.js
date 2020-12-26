@@ -2,7 +2,6 @@ import React from 'react'
 import BadgesList from '../components/BadgesList'
 import { Link } from 'react-router-dom'
 
-import Navbar from '../components/Navbar'
 
 import './styles/Badges.css'
 
@@ -20,7 +19,6 @@ class Badges extends React.Component {
 	render(){
 		return (
 		<div>
-			<Navbar />
 			<div className="badges-content">
 				<div className="row">
 					<h3>Speakers</h3>
